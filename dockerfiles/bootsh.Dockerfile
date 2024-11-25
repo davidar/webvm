@@ -20,3 +20,6 @@ COPY bootsh/configure bootsh/Makefile bootsh/
 COPY bootsh/scripts bootsh/scripts
 COPY bootsh/src bootsh/src
 COPY bootsh/lib bootsh/lib
+
+ENTRYPOINT []
+CMD [ "/bin/sh" ]
