@@ -277,7 +277,7 @@
 			// The Linux 'proc' filesystem which provides information about running processes
 			{type:"proc", path:"/proc"},
 			// Convenient access to sample documents in the user directory
-			{type:"dir", dev:documentsDevice, path:"/home/user/documents"}
+			// {type:"dir", dev:documentsDevice, path:"/home/user/documents"}
 		];
 		try
 		{
