@@ -1,0 +1,3 @@
+[submodule "bootsh"]
+	path = bootsh
+	url = https://github.com/davidar/bootsh.git
