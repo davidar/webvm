@@ -21,8 +21,5 @@ COPY bootsh/scripts bootsh/scripts
 COPY bootsh/src bootsh/src
 COPY bootsh/lib bootsh/lib
 
-ADD https://raw.githubusercontent.com/davidar/gdbserver/refs/heads/master/gdbserver.c .
-RUN cc -o /bin/gdbserver gdbserver.c
-
 ENTRYPOINT []
 CMD [ "/bin/sh" ]
