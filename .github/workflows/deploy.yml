@@ -189,7 +189,7 @@ jobs:
       - name: Build NPM package
         run: |
           npm install
-          WEBVM_MODE=github npm run build
+          WEBVM_MODE=github CX_URL=https://cxrtnc.leaningtech.com/20241130_226/cx.esm.js npm run build
 
       # Move required files for gh-pages deployment to the deployment directory $DEPLOY_DIR.
       - name: Copy build
