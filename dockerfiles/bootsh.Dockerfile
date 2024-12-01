@@ -21,5 +21,8 @@ COPY bootsh/scripts bootsh/scripts
 COPY bootsh/src bootsh/src
 COPY bootsh/lib bootsh/lib
 
+# run init script
+RUN echo ok
+
 ENTRYPOINT []
 CMD [ "/bin/sh" ]
