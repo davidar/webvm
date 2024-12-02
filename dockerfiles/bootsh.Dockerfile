@@ -1,6 +1,6 @@
 FROM --platform=i386 davidar/bootsh:latest
 
-COPY bootsh/tarballs/musl-1.2.5.tar.gz /src/tarballs/musl-1.2.5.tar.gz
+# COPY bootsh/tarballs/musl-1.2.5.tar.gz /src/tarballs/musl-1.2.5.tar.gz
 
 COPY bootsh/scripts/kilo.c /bin/kilo
 COPY bootsh/scripts/kl.c /bin/kl
@@ -16,13 +16,13 @@ COPY bootsh/scripts/zforth.zf /bin/zforth
 COPY bootsh/examples/ /root/
 WORKDIR /root/
 
-COPY bootsh/configure bootsh/Makefile bootsh/
-COPY bootsh/scripts bootsh/scripts
-COPY bootsh/src bootsh/src
-COPY bootsh/lib bootsh/lib
+# COPY bootsh/configure bootsh/Makefile bootsh/
+# COPY bootsh/scripts bootsh/scripts
+# COPY bootsh/src bootsh/src
+# COPY bootsh/lib bootsh/lib
 
-# run init script
-RUN echo ok
+# run init script and cleanup intermediate files
+RUN rm -rf /tmp/*
 
 ENTRYPOINT []
-CMD [ "/bin/sh" ]
+CMD [ "/bin/init" ]
